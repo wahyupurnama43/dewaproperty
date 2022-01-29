@@ -173,28 +173,18 @@ footer .navbar-brand {
 
 @media (max-width: 575.98px) {
     .menu {
-        text-align: center;
         padding-left: 0 !important;
-    }
-    .logo-footer {
-        text-align: center;
     }
     .batas-atas {
         margin-top: 3rem;
-        text-align: center;
     }
 }
 
 @media (max-width: 991.98px) {
     .batas-atas {
         margin-top: 3rem;
-        text-align: center;
     }
     .menu {
-        text-align: center;
         padding-left: 0 !important;
-    }
-    .logo-footer {
-        text-align: center;
     }
 }
