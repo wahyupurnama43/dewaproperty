@@ -143,15 +143,23 @@
 			</template>
 		</Carousel>
 	</div>
+
+	{{}}
 </template>
 <script>
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Slide } from "vue3-carousel";
-
+import { useScreen } from "vue-screen";
 import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
 	name: "Header",
+	setup() {
+		const screen = useScreen();
+		return {
+			screen,
+		};
+	},
 	components: {
 		Carousel,
 		Slide,
@@ -160,14 +168,13 @@ export default defineComponent({
 	data() {
 		return {
 			itemC: "",
-			windowWidth: window.innerHeight,
+			windowWidth: screen.width,
 			Noslide: 0,
 		};
 	},
 	mounted() {
-		this.windowWidth = 1500;
 		window.onresize = () => {
-			this.windowWidth = window.innerWidth;
+			this.windowWidth = screen.width;
 		};
 	},
 	methods: {
@@ -178,7 +185,7 @@ export default defineComponent({
 				return (this.Noslide = 3);
 			} else if (this.windowWidth > 768) {
 				return (this.Noslide = 2);
-			} else {
+			} else if (this.Noslide < 768) {
 				return (this.Noslide = 1);
 			}
 		},
