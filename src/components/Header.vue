@@ -34,13 +34,14 @@
 		</div>
 
 		<div class="row property">
-			<div class="col-lg-4 col-sm-12">
+			<div class="col-lg-4 col-sm-12 position-relative">
 				<div class="konten-property" style="background: url('img/home1.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover">
 					<div class="price">Rp 350.000 Jt</div>
 					<div class="konten-text">
 						<h4>Blue Origin Fams</h4>
 						<p>Jakarta, Indonesia</p>
 					</div>
+					<router-link to="/detail" class="stretched-link"></router-link>
 				</div>
 			</div>
 			<div class="col-lg-8 col-sm-12">
@@ -55,6 +56,7 @@
 								<h4>Ocean Land</h4>
 								<p>Bandung, Indonesia</p>
 							</div>
+							<router-link to="/detail" class="stretched-link"></router-link>
 						</div>
 					</div>
 
@@ -68,6 +70,7 @@
 								<h4>Stark House</h4>
 								<p>Bali, Indonesia</p>
 							</div>
+							<router-link to="/detail" class="stretched-link"></router-link>
 						</div>
 					</div>
 				</div>
